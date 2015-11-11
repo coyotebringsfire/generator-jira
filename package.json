@@ -1,0 +1,33 @@
+{
+  "name": "generator-jira",
+  "version": "0.0.1",
+  "description": "yeoman generator for jira tickets",
+  "main": "app/index.js",
+  "scripts": {
+    "pretest": "./node_modules/.bin/jshint app/*.js",
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coyotebringsfire/generator-jira.git"
+  },
+  "keywords": [
+    "yeoman",
+    "jira",
+    "node"
+  ],
+  "author": "aumkara@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coyotebringsfire/generator-jira/issues"
+  },
+  "homepage": "https://github.com/coyotebringsfire/generator-jira#readme",
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3",
+    "should": "^7.1.1"
+  },
+  "dependencies": {
+    "yeoman-generator": "^0.21.1"
+  }
+}
