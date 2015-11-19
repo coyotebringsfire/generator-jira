@@ -123,28 +123,4 @@ JiraGenerator.prototype.app = function projectFiles() {
   jira.findIssue(issueNumber, function(error, issue) {
       console.log('Status: ' + issue.fields.status.name);
   });
-  // scaffold out the tests based on env
-  /*if (this.environment === 'Node') {
-    this.template('_spec-node.js', 'spec/' + this.file);
-    if( fs.existsSync(path.resolve(process.cwd(), 'package.json')) ) {
-      pkg = JSON.parse( this.readFileAsString( path.resolve( process.cwd(), 'package.json' ) ) );
-      pkg.scripts.test = "mocha ./spec/",
-      fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) );
-    } else {
-      this.template('_package.json', 'package.json');
-    }
-  } else if (this.environment === 'browser') {
-    this.template('_index.html', 'index.html');
-    this.template('_spec-browser.js', 'spec/' + this.file);
-    this.template('_bower.json', 'bower.json');
-    this.copy('bowerrc', '.bowerrc');
-  }
-
-  // Create the src file if one doesn't already exist
-  if (!fileExists) {
-    this.template((this.environment === 'Node' ? '_src-node.js' : '_src-browser.js'), this.file);
-  }*/
-
-  // this.copy('editorconfig', '.editorconfig');
-  // this.copy('jshintrc', '.jshintrc');
 };
