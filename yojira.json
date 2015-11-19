@@ -1,0 +1,8 @@
+{
+	"host": "localhost",
+	"port": 31337,
+	"credentials": {
+		"user": "changeme",
+		"password": "changeme"
+	}
+}
