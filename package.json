@@ -12,6 +12,7 @@
     "url": "git+https://github.com/coyotebringsfire/generator-jira.git"
   },
   "keywords": [
+    "yeoman-generator",
     "yeoman",
     "jira",
     "node"
@@ -31,6 +32,7 @@
   "dependencies": {
     "html-wiring": "^1.2.0",
     "jira": "^0.9.2",
+    "jira-facade": "^0.1.1",
     "q": "^1.4.1",
     "yeoman-generator": "^0.21.1"
   }
