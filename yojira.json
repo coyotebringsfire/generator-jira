@@ -4,5 +4,7 @@
 	"credentials": {
 		"user": "changeme",
 		"password": "changeme"
-	}
+	},
+	"priorities": [ "Highest", "High", "Medium", "Low", "Lowest" ],
+	"severities": [ "Highest", "High", "Medium", "Low", "Lowest" ]
 }
