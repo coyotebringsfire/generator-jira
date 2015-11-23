@@ -9,7 +9,8 @@ var path 		= require('path'),
 		async		= require('async'),
 		util 		= require('util'),
 		os 			= require('os'),
-		path 		= require('path');
+		path 		= require('path'),
+		should  = require('should');
 
 
 var testProject = {
@@ -90,8 +91,9 @@ describe('jira ticket generator', function () {
   });
 
   it.only("should use jira server information from yojira.json file specified in YOJIRA environment variable", function doIt(done) {
-  	// start a fake jira server and use it to verify yojira.json
-  	fs.writeFileSync( path.join( os.tmpdir(), "yojira.json" ), JSON.stringify({}) );
+  	// TODO start a fake jira server and use it to verify yojira.json
+  	// for now use the settings in yojira.json
+  	// fs.writeFileSync( path.join( os.tmpdir(), "yojira.json" ), JSON.stringify({}) );
   	var jiraOptions = JSON.parse( fs.readFileSync( process.env["YOJIRA"] ) );
     helpers.run(path.join(__dirname, '../app'))
       .inDir(path.join(__dirname, './temp'))
@@ -99,7 +101,7 @@ describe('jira ticket generator', function () {
         'skip-install': true
       })
       .withPrompts({
-        'project': 'TEST',
+        'project': 'YOTEST',
         'type': 'BUG',
         'summary': "TEST SUMMARY",
         'priority': 1,
